@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Editar</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      <section id="form_container">
+          <form method="post" action="/edit/<%= character.id %> ">
+              <fieldset>
+                  <legend> Altering <%= character.class_name %>  </legend>
+                  <fieldset class="fieldset_data">
+                      <input type="text" name="class_name" required value="<%= character.class_name %> ">
+                      <label for="class_name"> Class Name </label>
+                  </fieldset>
+
+                  <fieldset class="fieldset_data">
+                      <input type="text" name="hit_die" required value="<%= character.hit_die %>" />
+                      <label for="hit_die">Hit</label>
+                  </fieldset>
+      
+                  <fieldset class="fieldset_data">
+                      <input type="text" name="primary_ability" required value="<%= character.primary_ability %>" />
+                      <label for="primary_ability">Primary Hability</label>
+                  </fieldset>
+      
+                  <fieldset class="fieldset_data">
+                      <input type="text" name="saves" required value="<%= character.saves %>" />
+                      <label for="saves">Saves</label>
+                  </fieldset>
+      
+                  <fieldset class="fieldset_data">
+                      <input type="text" name="description" required value="<%= character.description %>" />
+                      <label for="description">Description</label>
+                  </fieldset>
+
+                  <fieldset class="fieldset_data">
+                      <input type="url" name="img" required value="<%= character.img %>">
+                      <label for="img"> Img </label>
+                  </fieldset>
+
+                  <fieldset class="fieldset_data">
+                      <input type="text" name="iframe" required value="<%= character.iframe %>">
+                      <label for="iframe"> Iframe </label>
+                  </fieldset>
+                  <div id="btn_container">
+                      <button id="btn_submit" type="submit"> Submit </button>
+                  </div>
+              </fieldset>
+          </form>
+      </section>
+  </main>
+  <!-- <%- include('./partials/footer.ejs') %> -->
+</body>
+</body>
+</html>

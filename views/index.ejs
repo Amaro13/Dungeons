@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <title>D&D CLASSES</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="/img/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="/img/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      <!-- <div id="sub_header"></div> -->
+      <section id="card_container">
+        <% listClasses.forEach(element => { %>
+        <a href="/details/<%= element.id %> ">
+          <article class="cards">
+            <div class="card_img">
+              <img src="<%= element.img %> " alt="<%= element.class_name %> " />
+            </div>
+            <div class="card_name"><%= element.class_name %></div>
+          </article>
+        </a>
+
+        <div class="btn_container">
+          <a href="/delete/<%=element.id%>">
+            <i class="fa-solid fa-trash"></i
+          ></a>
+          <a href="/edit/<%=element.id%>">
+            <i class="fa-solid fa-pencil"></i
+          ></a>
+          <a href="/fight/<%=element.id%>">
+            <i class="fa-solid fa-favicon"></i
+          ></a>
+        </div>
+        <% }) %>
+      </section>
+    </main>
+    <button></button>
+    <!-- <%- include('./partials/footer.ejs')%> -->
+  </body>
+</html>

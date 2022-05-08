@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Create New Class</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      <section id="form_container">
+        <form method="post" action="/create">
+          <fieldset>
+            <legend>Create Class</legend>
+            <fieldset class="fieldset_data">
+              <input type="text" name="class_name" required />
+              <label for="class_name">Class Name</label>
+            </fieldset>
+
+            <fieldset class="fieldset_data">
+              <input type="number" name="hit_die" required />
+              <label for="hit_die">Hit</label>
+            </fieldset>
+
+            <fieldset class="fieldset_data">
+              <input type="text" name="primary_ability" required />
+              <label for="primary_ability">Primary Hability</label>
+            </fieldset>
+
+            <fieldset class="fieldset_data">
+              <input type="text" name="saves" required />
+              <label for="saves">Saves</label>
+            </fieldset>
+
+            <fieldset class="fieldset_data">
+              <input type="text" name="description" required />
+              <label for="description">Description</label>
+            </fieldset>
+
+            <fieldset class="fieldset_data">
+              <input type="url" name="img" required />
+              <label for="img">Image</label>
+            </fieldset>
+
+            <fieldset class="fieldset_data">
+              <input type="text" name="iframe" required />
+              <label for="iframe">Video Example</label>
+            </fieldset>
+            <div id="btn_container">
+              <button id="btn_submit" type="submit">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <!-- <%- include('./partials/footer.ejs')%> -->
+  </body>
+</html>

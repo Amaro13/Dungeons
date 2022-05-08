@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Fight the Dragon!</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+        <div id="sub_header"><%= character.class_name %> Fights the Dragon</div>
+      <section id="fight_container">
+
+            <article class="cards">
+              <div class="card_img">
+                <img src="<%= character.img %> " alt="<%= character.class_name %> " />
+              </div>
+              <div class="card_name"><div><%= character.class_name %> </div><div><%= character.hit_die %></div></div>
+            </article>
+  
+          <div class="btn_container">
+            <a href="">
+              <i class="fa-solid fa-trash"></i
+            ></a>
+            <a href="">
+              <i class="fa-solid fa-pencil"></i
+            ></a>
+        
+      </section>
+    </main>
+    <button></button>
+    <!-- <%- include('./partials/footer.ejs')%> -->
+  </body>
+</html>

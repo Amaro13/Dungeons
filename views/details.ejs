@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Description</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <div id="sub_header"><%= classesDetails.class_name %></div>
+      <section id="details_container">
+        <iframe <%-classesDetails.iframe %>> </iframe>
+        <table>
+          <thead>
+            <th colspan="2">Details</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hit</td>
+              <td><%= classesDetails.hit_die %></td>
+            </tr>
+            <tr>
+              <td>Primary Hability</td>
+              <td><%= classesDetails.primary_ability %></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><%= classesDetails.description %></td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </section>
+    </main>
+    <!-- <%- include('./partials/footer.ejs') %> -->
+  </body>
+</html>
