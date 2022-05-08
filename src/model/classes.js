@@ -56,3 +56,5 @@ const initTable = async () => {
 };
 
 initTable();
+
+module.exports = classes;
