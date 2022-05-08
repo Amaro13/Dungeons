@@ -49,7 +49,7 @@ export const classes = connection.define(
 
 const initTable = async () => {
   try {
-    await filmes.sync();
+    await classes.sync();
   } catch (error) {
     return error.message;
   }
