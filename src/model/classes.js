@@ -23,7 +23,7 @@ export const classes = connection.define(
       allowNull: false,
     },
     saves: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
       allowNull: false,
     },
     description: {
