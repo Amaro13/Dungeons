@@ -47,14 +47,9 @@ export const classes = connection.define(
   }
 );
 
+// For render deploy
 const initTable = async () => {
-  try {
-    await classes.sync();
-  } catch (error) {
-    return error.message;
-  }
+  await classes.sync();
 };
 
 initTable();
-
-module.exports = classes;
