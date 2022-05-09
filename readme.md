@@ -37,10 +37,10 @@ This project was developed to test the content learned during the course at Blue
 
 ## :information_source: Layout
 
-You can check the project rendered here:
+You can check the project rendered here: https://dungeons-and-dragons.onrender.com/
 
 ## :memo: Licença
 
-This project is under MIT protection. Veja o arquivo [LICENSE](https://github.com/amaro13/locadora/blob/main/LICENSE) para mais detalhes.
+This project is under MIT protection. 
 
 Work, development and deployment done by Amaro Francisco 👋🏽 [Entre em contato!](https://www.linkedin.com/in/amaroribeiro/)
