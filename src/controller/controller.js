@@ -31,17 +31,15 @@ export const getDelete = async (req, res) => {
   }
 };
 
-export const getCreate = async (req, res) => {
-  // try {
-  res.render("create.ejs");
-  // }
-  // catch (err) {
-  //   res.send(error.message);
-  // }
+export const getCreate = (req, res) => {
+  try {
+    res.render("create.ejs"), { toggle: false };
+  } catch (err) {
+    res.send(error.message);
+  }
 };
 
 export const postCreate = async (req, res) => {
-  console.log("TESTE " + req);
   const {
     class_name,
     hit_die,
@@ -73,7 +71,6 @@ export const postCreate = async (req, res) => {
         iframe,
       });
 
-      console.log(req.body);
       res.redirect("/");
     }
   } catch (err) {
@@ -91,9 +88,6 @@ export const getEdit = async (req, res) => {
 };
 
 export const postEdit = async (req, res) => {
-  console.log("Olha isso");
-  console.log(req.body);
-  console.log("Funciona");
   try {
     const {
       class_name,

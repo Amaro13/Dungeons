@@ -57,5 +57,18 @@
       </section>
     </main>
     <!-- <%- include('./partials/footer.ejs')%> -->
+    <% if (toggle) { %>
+    <script>
+      Swal.fire({
+        icon: "success",
+        title: "Congratulations!",
+        text: "You can now use a new class!",
+        timer: 5000,
+      });
+      setInterval(() => {
+        window.location.href = "/";
+      }, 5000);
+    </script>
+    <% } %>
   </body>
 </html>

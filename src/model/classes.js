@@ -31,11 +31,11 @@ export const classes = connection.define(
       allowNull: false,
     },
     img: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(2000),
       allowNull: false,
     },
     iframe: {
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(20000),
       allowNull: true,
     },
   },
@@ -49,7 +49,11 @@ export const classes = connection.define(
 
 // For render deploy
 const initTable = async () => {
-  await classes.sync();
+  try {
+    await classes.sync();
+  } catch (error) {
+    return error.message;
+  }
 };
 
 initTable();
